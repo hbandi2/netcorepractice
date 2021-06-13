@@ -1,6 +1,7 @@
 ﻿using System;
+using BankAppLibrary;
 
-namespace ConsoleApp1
+namespace ConsoleBankApp
 {
     
     class Program

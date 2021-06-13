@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Humanizer;
 
-namespace ConsoleApp1
+namespace BankAppLibrary
 {
     public class BankAccount
     {
@@ -66,7 +67,7 @@ namespace ConsoleApp1
             foreach(var transaction in allTransactions)
             {
                 // ROWS
-                report.AppendLine($"{transaction.Date.ToShortDateString()}\t{transaction.Amount}\t{transaction.Notes}");
+                report.AppendLine($"{transaction.Date.ToShortDateString()}\t{transaction.Notes}\t{((int)transaction.Amount).ToWords()}");
             }
 
             return report.ToString();
